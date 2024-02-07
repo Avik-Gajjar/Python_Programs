@@ -23,8 +23,3 @@
 # print(f"Each person have to pay {total_pay}")
 
 # DAY THREE -
-
-# GitHub Testing
-print("What a wonderful feeling of achievement by connecting Github and my two laptops")
-# Thanks changes accepted
-print("Kudos!")
