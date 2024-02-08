@@ -22,7 +22,65 @@
 #
 # print(f"Each person have to pay {total_pay}")
 
-# DAY THREE -
+# DAY THREE - Pizza Order
+
+# print("Thank you for choosing Python Pizza Deliveries!")
+# size = input() # What size pizza do you want? S, M, or L
+# add_pepperoni = input() # Do you want pepperoni? Y or N
+# extra_cheese = input() # Do you want extra cheese? Y or N
+# # 🚨 Don't change the code above 👆
+# # Write your code below this line 👇
+# bill = 0
+# if size == "S":
+#   bill += 15
+# elif size == "M":
+#   bill += 20
+# else:
+#   bill += 25
+#
+# if add_pepperoni == "Y":
+#   if size == "S":
+#     bill += 2
+#   else:
+#     bill += 3
+#
+# if extra_cheese == "Y":
+#   bill += 1
+#
+# print(f"Your final bill is: ${bill}.")
+
+# DAY THREE - Love Calculator
+
+print("The Love Calculator is calculating your score...")
+name1 = input() # What is your name?
+name2 = input() # What is their name?
+# 🚨 Don't change the code above 👆
+# Write your code below this line 👇
+combined_name = name1 + name2
+lower_name = combined_name.lower()
+
+t = lower_name.count("t")
+r = lower_name.count("r")
+u = lower_name.count("u")
+e = lower_name.count("e")
+first_digit = t + r + u + e
+
+l = lower_name.count("l")
+o = lower_name.count("o")
+v = lower_name.count("v")
+e = lower_name.count("e")
+second_digit = l + o + v + e
+
+love_score = int(str(first_digit) + str(second_digit))
+
+if (love_score < 10) or (love_score > 90):
+  print(f"Your score is {love_score}, you go together like coke and mentos.")
+elif (love_score >= 40) and (love_score <=50):
+  print(f"Your score is {love_score}, you are alright together.")
+else:
+  print(f"Your score is {love_score}.")
+
+# DAY THREE - Treasure Island
 
 # GitHub Testing
 print("What a wonderful feeling of achievement by connecting Github and my two laptops")
