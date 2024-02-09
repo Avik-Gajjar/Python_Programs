@@ -82,7 +82,3 @@ else:
 
 # DAY THREE - Treasure Island
 
-# GitHub Testing
-print("What a wonderful feeling of achievement by connecting Github and my two laptops")
-# Thanks changes accepted
-print("Kudos!")
