@@ -51,34 +51,58 @@
 
 # DAY THREE - Love Calculator
 
-print("The Love Calculator is calculating your score...")
-name1 = input() # What is your name?
-name2 = input() # What is their name?
-# 🚨 Don't change the code above 👆
-# Write your code below this line 👇
-combined_name = name1 + name2
-lower_name = combined_name.lower()
-
-t = lower_name.count("t")
-r = lower_name.count("r")
-u = lower_name.count("u")
-e = lower_name.count("e")
-first_digit = t + r + u + e
-
-l = lower_name.count("l")
-o = lower_name.count("o")
-v = lower_name.count("v")
-e = lower_name.count("e")
-second_digit = l + o + v + e
-
-love_score = int(str(first_digit) + str(second_digit))
-
-if (love_score < 10) or (love_score > 90):
-  print(f"Your score is {love_score}, you go together like coke and mentos.")
-elif (love_score >= 40) and (love_score <=50):
-  print(f"Your score is {love_score}, you are alright together.")
-else:
-  print(f"Your score is {love_score}.")
+# print("The Love Calculator is calculating your score...")
+# name1 = input() # What is your name?
+# name2 = input() # What is their name?
+# # 🚨 Don't change the code above 👆
+# # Write your code below this line 👇
+# combined_name = name1 + name2
+# lower_name = combined_name.lower()
+#
+# t = lower_name.count("t")
+# r = lower_name.count("r")
+# u = lower_name.count("u")
+# e = lower_name.count("e")
+# first_digit = t + r + u + e
+#
+# l = lower_name.count("l")
+# o = lower_name.count("o")
+# v = lower_name.count("v")
+# e = lower_name.count("e")
+# second_digit = l + o + v + e
+#
+# love_score = int(str(first_digit) + str(second_digit))
+#
+# if (love_score < 10) or (love_score > 90):
+#   print(f"Your score is {love_score}, you go together like coke and mentos.")
+# elif (love_score >= 40) and (love_score <=50):
+#   print(f"Your score is {love_score}, you are alright together.")
+# else:
+#   print(f"Your score is {love_score}.")
 
 # DAY THREE - Treasure Island
 
+print("Welcome to Treasure Island!")
+print("Your Mission is to find the treasure.")
+
+user_input_1 = input("You are at a cross road. Where do you want to go? Type left or right.\n").lower()
+if user_input_1 == "right":
+  print("Fall into a hole. Game Over.")
+elif user_input_1 == "left":
+  user_input_2 = input("You come to a lake. There is an island in the middle of the lake. Type 'wait' to wait for a boat. Type 'swim' to swim across.\n").lower()
+  if user_input_2 == "swim":
+    print("Attacked by Crocodile. Game Over.")
+  elif user_input_2 == "wait":
+    user_input_3 = input("You arrive at  the island unharmed. There is house with 3 doors. One red, one yellow, and one blue. Which color do you choose?\n").lower()
+    if user_input_3 == "red":
+      print("Burned by Fire. Game Over.")
+    elif user_input_3 == "yellow":
+      print("You found the Treasure! YOU WIN!!")
+    elif user_input_3 == "blue":
+      print("Eaten by beast. Game Over.")
+    else:
+      print("You can't choose anything elese. Game Over.")
+  else:
+    print("Sorry, Wrong Input.")
+else:
+  print("Sorry, Wrong Input.")
