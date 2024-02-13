@@ -262,3 +262,31 @@
 
 # Hard Level - Order of characters randomised:
 # e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
+
+# DAY SIX - Robot Hurdle 1, 2, 3, and 4(hard)
+# def turn_right():
+#     turn_left()
+#     turn_left()
+#     turn_left()
+# def jump():
+#     turn_left()
+#     move()
+#     while wall_on_right():
+#         move()
+#     turn_right()
+#     move()
+#     turn_right()
+#     move()
+#     while front_is_clear():
+#         move()
+#     turn_left()
+#
+# while at_goal() == False:
+#     if front_is_clear():
+#         move()
+#     if wall_in_front():
+#         jump()
+
+# DAY SIX - Escaping the Maze
+
+
