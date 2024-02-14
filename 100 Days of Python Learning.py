@@ -263,6 +263,7 @@
 # Hard Level - Order of characters randomised:
 # e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
 
+
 # DAY SIX - Robot Hurdle 1, 2, 3, and 4(hard)
 # def turn_right():
 #     turn_left()
@@ -288,5 +289,45 @@
 #         jump()
 
 # DAY SIX - Escaping the Maze
+
+# DAY SEVEN - Hangman Game
+
+import random
+
+word_list = ["aardvark", "baboon", "camel"]
+chosen_word = random.choice(word_list)
+word_length = len(chosen_word)
+
+display = []
+for _ in range(word_length):
+    display += "_"
+print(display)
+
+# Testing code
+print(f'Pssst, the solution is {chosen_word}.')
+
+end_of_user_input = False
+
+while not end_of_user_input:
+    guess = input("Guess a letter to begin the game: ").lower()
+
+    for position in range(word_length):  # Code from Udemy
+        letter = chosen_word[position]
+        if letter == guess:
+            display[position] = letter
+    print(display)
+
+    if "_" not in display:
+        end_of_user_input = True
+        print("Yay! You Won!")
+
+# MY ACTUAL CODE LOGIC
+# for letter in chosen_word:
+#     display = "_"
+#     if letter == guess:
+#         print(guess + " ", end="")  # Prints vertical instead of horizontal
+#     else:
+#         print(display + " ", end="")
+
 
 
