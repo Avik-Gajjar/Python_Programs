@@ -288,38 +288,67 @@
 #     if wall_in_front():
 #         jump()
 
-# DAY SIX - Escaping the Maze
+# DAY SIX - Escaping the Maze Need to try the endless loop scenario after Day 15
+# def turn_right():
+#     turn_left()
+#     turn_left()
+#     turn_left()
+#
+# while at_goal() == False:
+#     if right_is_clear():
+#         turn_right()
+#         move()
+#     elif front_is_clear():
+#         move()
+#     else:
+#         turn_left()
 
 # DAY SEVEN - Hangman Game
 
-import random
-
-word_list = ["aardvark", "baboon", "camel"]
-chosen_word = random.choice(word_list)
-word_length = len(chosen_word)
-
-display = []
-for _ in range(word_length):
-    display += "_"
-print(display)
-
-# Testing code
-print(f'Pssst, the solution is {chosen_word}.')
-
-end_of_user_input = False
-
-while not end_of_user_input:
-    guess = input("Guess a letter to begin the game: ").lower()
-
-    for position in range(word_length):  # Code from Udemy
-        letter = chosen_word[position]
-        if letter == guess:
-            display[position] = letter
-    print(display)
-
-    if "_" not in display:
-        end_of_user_input = True
-        print("Yay! You Won!")
+# import random
+# import hangman_word_list
+# import hangman_art
+#
+# chosen_word = random.choice(hangman_word_list.word_list)
+# word_length = len(chosen_word)
+# end_of_user_input = False
+# lives = 6
+# guess_letter = " "
+#
+# print(hangman_art.logo)
+#
+# display = []
+# for _ in range(word_length):
+#     display += "_"
+# # print(display)
+#
+# # Testing code
+# # print(f'Pssst, the solution is {chosen_word}.')
+#
+# while not end_of_user_input:
+#     guess = input("Guess a letter to begin the game: ").lower()
+#
+#     if guess in display:
+#         print(f"You already guessed this letter: {guess}")
+#
+#     for position in range(word_length):  # Code from Udemy
+#         letter = chosen_word[position]
+#         if letter == guess:
+#             display[position] = letter
+#     if guess not in chosen_word:
+#         print("Chosen letter is not in the Word. You lose a life.")
+#         lives -= 1
+#         if lives == 0:
+#             end_of_user_input = True
+#             print("You Lose.")
+#
+#     print(display)
+#
+#     if "_" not in display:
+#         end_of_user_input = True
+#         print("Yay! You Won!")
+#
+#     print(hangman_art.stages[lives])
 
 # MY ACTUAL CODE LOGIC
 # for letter in chosen_word:
@@ -329,5 +358,5 @@ while not end_of_user_input:
 #     else:
 #         print(display + " ", end="")
 
-
+# DAY EIGHT
 
