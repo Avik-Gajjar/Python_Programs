@@ -392,35 +392,78 @@
 # n = int(input())  # Check this number
 # prime_checker(number=n)
 
-# DAY EIGHT - Digital Caesar Cipher
+# DAY EIGHT - Digital Caesar Cipher - TOUGHEST ONE AND SOLVED W/O HELP
 
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
+            'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e',
+            'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
+            'v', 'w', 'x', 'y', 'z', ]
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
 text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
 
-# TODO-1: Create a function called 'encrypt' that takes the 'text' and 'shift' as inputs.
-def encrypt(user_message):
-    user_message_index = []
-    user_message_index = text
-    text_replace = []
-    for num in enumerate(user_message_index):
 
-        text_replace.append()
-    print(text_replace)
+def caesar(user_message, no_of_shift, user_request):
+    final_message = ""
+    if user_request == "decode":
+        no_of_shift *= -1
+    for counter in user_message:
+        letter_index = alphabet.index(counter)
+        new_position = letter_index + no_of_shift
+        final_message += alphabet[new_position]
+    print(f"Here's the {user_request}d result: {final_message}")
 
-    # TODO-2: Inside the 'encrypt' function, shift each letter of the 'text' forwards in the alphabet by the shift amount and print the encrypted text.
-    #e.g.
-    #plain_text = "hello"
-    #shift = 5
-    #cipher_text = "mjqqt"
-    #print output: "The encoded text is mjqqt"
 
-    ##HINT: How do you get the index of an item in a list:
-    #https://stackoverflow.com/questions/176918/finding-the-index-of-an-item-in-a-list
+caesar(user_message=text, no_of_shift=shift, user_request=direction)
 
-    ##🐛Bug alert: What happens if you try to encode the word 'civilization'?🐛
+# def encrypt(user_message, no_of_shift):
+#     cipher_message = ""
+#
+#     for counter in text:
+#         letter_index = alphabet.index(counter) + shift
+#
+#         cipher_message += alphabet[letter_index]
+#
+#     print(f"The encoded message is {cipher_message}")
+#
+#
+# def decrypt(user_message, no_of_shift):
+#     decipher_message = ""
+#
+#     for counter in text:
+#         letter_index = alphabet.index(counter) - shift
+#
+#         decipher_message += alphabet[letter_index]
+#
+#     print(f"The decoded message is {decipher_message}")
+#
+#
+# alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
+#             'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e',
+#             'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
+#             'v', 'w', 'x', 'y', 'z',]
+#
+# direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
+#
+# if direction == "encode":
+#     text = input("Type your message:\n").lower()
+#     shift = int(input("Type the shift number:\n"))
+#     encrypt(text, shift)
+# elif direction == "decode":
+#     text = input("Type your message:\n").lower()
+#     shift = int(input("Type the shift number:\n"))
+#     decrypt(text, shift)
+# else:
+#     print("Please enter 'encode' or 'decode' to proceed.")
 
-# TODO-3: Call the encrypt function and pass in the user inputs. You should be able to test the code and encrypt a message.
-encrypt(user_message=text)
+# My First actual logic
+# count = 0
+# letter_counter = 0
+# while count < len(text):
+#   first_letter = text[letter_counter]
+#   letter_index = alphabet.index(first_letter) + shift
+#   letter_counter += 1
+#   count += 1
+#   cipher_message += alphabet[letter_index]
+
+# DAY NINE
