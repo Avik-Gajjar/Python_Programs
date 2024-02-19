@@ -394,28 +394,6 @@
 
 # DAY EIGHT - Digital Caesar Cipher - TOUGHEST ONE AND SOLVED W/O HELP
 
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
-            'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a', 'b', 'c', 'd', 'e',
-            'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
-            'v', 'w', 'x', 'y', 'z', ]
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
-text = input("Type your message:\n").lower()
-shift = int(input("Type the shift number:\n"))
-
-
-def caesar(user_message, no_of_shift, user_request):
-    final_message = ""
-    if user_request == "decode":
-        no_of_shift *= -1
-    for counter in user_message:
-        letter_index = alphabet.index(counter)
-        new_position = letter_index + no_of_shift
-        final_message += alphabet[new_position]
-    print(f"Here's the {user_request}d result: {final_message}")
-
-
-caesar(user_message=text, no_of_shift=shift, user_request=direction)
-
 # def encrypt(user_message, no_of_shift):
 #     cipher_message = ""
 #
@@ -466,4 +444,25 @@ caesar(user_message=text, no_of_shift=shift, user_request=direction)
 #   count += 1
 #   cipher_message += alphabet[letter_index]
 
-# DAY NINE
+# DAY NINE - STUDENT GRADES
+student_scores = {
+  "Harry": 81,
+  "Ron": 78,
+  "Hermione": 99,
+  "Draco": 74,
+  "Neville": 62,
+}
+
+student_grades = {}  # Empty Dictionary
+
+for items in student_scores:
+  if student_scores[items] >= 91 and student_scores[items] <= 100:
+    student_grades[items] = "Outstanding"
+  elif student_scores[items] >= 81 and student_scores[items] <= 90:
+    student_grades[items] = "Exceeds Expectations"
+  elif student_scores[items] >= 71 and student_scores[items] <= 80:
+    student_grades[items] = "Acceptable"
+  else:
+    student_grades[items] = "Fail"
+
+print(student_grades)

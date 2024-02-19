@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4e514607-eb4b-4ab0-b4dd-3e0bed42f240" name="Changes" comment="Added day five programs. Very challenging!">
+    <list default="true" id="4e514607-eb4b-4ab0-b4dd-3e0bed42f240" name="Changes" comment="Completed Caesar cipher program">
+      <change afterPath="$PROJECT_DIR$/Caesar_Ciper_art.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/100 Days of Python Learning.py" beforeDir="false" afterPath="$PROJECT_DIR$/100 Days of Python Learning.py" afterDir="false" />
     </list>
@@ -49,7 +50,7 @@
     </option>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -161,7 +162,31 @@
       <option name="project" value="LOCAL" />
       <updated>1707693760281</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Day seven Hangman game part one">
+      <option name="closed" value="true" />
+      <created>1707870211528</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1707870211528</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Initial Caesar cipher program">
+      <option name="closed" value="true" />
+      <created>1707998069102</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1707998069102</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Completed Caesar cipher program">
+      <option name="closed" value="true" />
+      <created>1708047220304</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1708047220304</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -218,6 +243,9 @@
     <MESSAGE value="Clearing comments" />
     <MESSAGE value="Added Day four programs" />
     <MESSAGE value="Added day five programs. Very challenging!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added day five programs. Very challenging!" />
+    <MESSAGE value="Day seven Hangman game part one" />
+    <MESSAGE value="Initial Caesar cipher program" />
+    <MESSAGE value="Completed Caesar cipher program" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed Caesar cipher program" />
   </component>
 </project>
