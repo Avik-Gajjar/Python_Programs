@@ -445,24 +445,57 @@
 #   cipher_message += alphabet[letter_index]
 
 # DAY NINE - STUDENT GRADES
-student_scores = {
-  "Harry": 81,
-  "Ron": 78,
-  "Hermione": 99,
-  "Draco": 74,
-  "Neville": 62,
-}
+# student_scores = {
+#   "Harry": 81,
+#   "Ron": 78,
+#   "Hermione": 99,
+#   "Draco": 74,
+#   "Neville": 62,
+# }
+#
+# student_grades = {}  # Empty Dictionary
+#
+# for items in student_scores:
+#   if student_scores[items] >= 91 and student_scores[items] <= 100:
+#     student_grades[items] = "Outstanding"
+#   elif student_scores[items] >= 81 and student_scores[items] <= 90:
+#     student_grades[items] = "Exceeds Expectations"
+#   elif student_scores[items] >= 71 and student_scores[items] <= 80:
+#     student_grades[items] = "Acceptable"
+#   else:
+#     student_grades[items] = "Fail"
+#
+# print(student_grades)
 
-student_grades = {}  # Empty Dictionary
+# DAY NINE - Dictionary and List Function
+country = input() # Add country name
+visits = int(input()) # Number of visits
+list_of_cities = eval(input()) # create list from formatted string
 
-for items in student_scores:
-  if student_scores[items] >= 91 and student_scores[items] <= 100:
-    student_grades[items] = "Outstanding"
-  elif student_scores[items] >= 81 and student_scores[items] <= 90:
-    student_grades[items] = "Exceeds Expectations"
-  elif student_scores[items] >= 71 and student_scores[items] <= 80:
-    student_grades[items] = "Acceptable"
-  else:
-    student_grades[items] = "Fail"
+travel_log = [
+  {
+    "country": "France",
+    "visits": 12,
+    "cities": ["Paris", "Lille", "Dijon"]
+  },
+  {
+    "country": "Germany",
+    "visits": 5,
+    "cities": ["Berlin", "Hamburg", "Stuttgart"]
+  },
+]
 
-print(student_grades)
+# TODO: Write the function that will allow new countries
+# to be added to the travel_log.
+def add_new_country(country_name, no_of_visits, cities):
+    new_visit = {}
+    new_visit["country"] = country_name
+    new_visit["visits"] = no_of_visits
+    new_visit["cities"] = cities
+    travel_log.append(new_visit)
+
+add_new_country(country, visits, list_of_cities)
+print(f"I've been to {travel_log[2]['country']} {travel_log[2]['visits']} times.")
+print(f"My favourite city was {travel_log[2]['cities'][0]}.")
+
+# DAY TEN -
