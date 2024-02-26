@@ -323,7 +323,7 @@
 # # print(display)
 #
 # # Testing code
-# # print(f'Pssst, the solution is {chosen_word}.')
+# # print(f"Pssst, the solution is {chosen_word}.")
 #
 # while not end_of_user_input:
 #     guess = input("Guess a letter to begin the game: ").lower()
@@ -468,34 +468,65 @@
 # print(student_grades)
 
 # DAY NINE - Dictionary and List Function
-country = input() # Add country name
-visits = int(input()) # Number of visits
-list_of_cities = eval(input()) # create list from formatted string
-
-travel_log = [
-  {
-    "country": "France",
-    "visits": 12,
-    "cities": ["Paris", "Lille", "Dijon"]
-  },
-  {
-    "country": "Germany",
-    "visits": 5,
-    "cities": ["Berlin", "Hamburg", "Stuttgart"]
-  },
-]
-
-# TODO: Write the function that will allow new countries
-# to be added to the travel_log.
-def add_new_country(country_name, no_of_visits, cities):
-    new_visit = {}
-    new_visit["country"] = country_name
-    new_visit["visits"] = no_of_visits
-    new_visit["cities"] = cities
-    travel_log.append(new_visit)
-
-add_new_country(country, visits, list_of_cities)
-print(f"I've been to {travel_log[2]['country']} {travel_log[2]['visits']} times.")
-print(f"My favourite city was {travel_log[2]['cities'][0]}.")
+# country = input() # Add country name
+# visits = int(input()) # Number of visits
+# list_of_cities = eval(input()) # create list from formatted string
+#
+# travel_log = [
+#   {
+#     "country": "France",
+#     "visits": 12,
+#     "cities": ["Paris", "Lille", "Dijon"]
+#   },
+#   {
+#     "country": "Germany",
+#     "visits": 5,
+#     "cities": ["Berlin", "Hamburg", "Stuttgart"]
+#   },
+# ]
+#
+# # TODO: Write the function that will allow new countries
+# # to be added to the travel_log.
+# def add_new_country(country_name, no_of_visits, cities):
+#     new_visit = {}
+#     new_visit["country"] = country_name
+#     new_visit["visits"] = no_of_visits
+#     new_visit["cities"] = cities
+#     travel_log.append(new_visit)
+#
+# add_new_country(country, visits, list_of_cities)
+# print(f"I've been to {travel_log[2]['country']} {travel_log[2]['visits']} times.")
+# print(f"My favourite city was {travel_log[2]['cities'][0]}.")
 
 # DAY TEN -
+from auction_art import logo
+
+print(logo)
+
+print("Welcome to the Bidding Auction. Let's begin!")
+
+user_bid_data = {}
+while_loop = False
+
+
+def winning_bidder(bid):
+    highest_bid = 0
+    winner = ""
+    for bidder in bid:
+       a_bid_amt = bid[bidder]
+       if a_bid_amt > highest_bid:
+           highest_bid = a_bid_amt
+           winner = bidder
+    print(f"The winner is {winner} with highest bid of ${highest_bid}")
+
+
+while not while_loop:
+    user_name = input("Please enter your name:\n")
+    user_bid = int(input("Please enter your bid:\n$"))
+
+    user_bid_data[user_name] = user_bid
+
+    loop_decision = input("Is there anymore Bids? Enter 'Yes' or 'No'. :\n").lower()
+    if loop_decision == "no":
+        while_loop = True
+        winning_bidder(user_bid_data)
