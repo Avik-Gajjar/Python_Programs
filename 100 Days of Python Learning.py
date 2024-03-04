@@ -498,35 +498,115 @@
 # print(f"I've been to {travel_log[2]['country']} {travel_log[2]['visits']} times.")
 # print(f"My favourite city was {travel_log[2]['cities'][0]}.")
 
-# DAY TEN -
-from auction_art import logo
+# DAY NINE - Secret Auction Program
+
+# from auction_art import logo
+#
+# print(logo)
+#
+# print("Welcome to the Bidding Auction. Let's begin!")
+#
+# user_bid_data = {}
+# while_loop = False
+#
+#
+# def winning_bidder(bid):
+#     highest_bid = 0
+#     winner = ""
+#     for bidder in bid:
+#        a_bid_amt = bid[bidder]
+#        if a_bid_amt > highest_bid:
+#            highest_bid = a_bid_amt
+#            winner = bidder
+#     print(f"The winner is {winner} with highest bid of ${highest_bid}")
+#
+#
+# while not while_loop:
+#     user_name = input("Please enter your name:\n")
+#     user_bid = int(input("Please enter your bid:\n$"))
+#
+#     user_bid_data[user_name] = user_bid
+#
+#     loop_decision = input("Is there anymore Bids? Enter 'Yes' or 'No'. :\n").lower()
+#     if loop_decision == "no":
+#         while_loop = True
+#         winning_bidder(user_bid_data)
+
+# DAY TEN - Functions with Output
+
+# def format_name(f_name, l_name):
+#    full_name = f_name + " " + l_name
+#    return full_name.title()
+#
+#
+# print(format_name("EVaaN", "gaJJar"))
+#
+# # DAY TEN - Days in a Month
+#
+#
+# def is_leap(year):
+#    """This function will check that the given year is a Leap year or not."""
+#    if year % 4 == 0:
+#       if year % 100 == 0:
+#          if year % 400 == 0:
+#             return True
+#          else:
+#             return False
+#       else:
+#          return True
+#    else:
+#       return False
+#
+#
+# def days_in_month(a_year, a_month):
+#    month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+#    a_year = is_leap(a_year)
+#    if a_year: # this way it is by default True
+#       return 29
+#    else:
+#       return month_days[a_month - 1]
+#
+#
+# year = int(input())  # Enter a year
+# month = int(input())  # Enter a month
+# days = days_in_month(year, month)
+# print(days)
+
+# DAY TEN - Calculator Program
+
+from Calculator_art import logo
 
 print(logo)
 
-print("Welcome to the Bidding Auction. Let's begin!")
+# Addition
+def add(n1, n2):
+   return n1 + n2
 
-user_bid_data = {}
-while_loop = False
+# Subtraction
+def subtract(n1, n2):
+   return n1 - n2
+
+# Multiplication
+def multiply(n1, n2):
+   return n1 * n2
+
+# Division
+def divide(n1, n2):
+   return n1 / n2
 
 
-def winning_bidder(bid):
-    highest_bid = 0
-    winner = ""
-    for bidder in bid:
-       a_bid_amt = bid[bidder]
-       if a_bid_amt > highest_bid:
-           highest_bid = a_bid_amt
-           winner = bidder
-    print(f"The winner is {winner} with highest bid of ${highest_bid}")
+calculation_dict = {"+": add, "-": subtract, "*": multiply, "/": divide}
+
+num1 = int(input("Enter the first number: "))
+
+for items in calculation_dict:
+   print(items)
+operation_symbol = input("Pick an operation from the line above: ")
+
+num2 = int(input("Enter the second number: "))
+
+calculation_function= calculation_dict[operation_symbol]
+result = calculation_function(num1, num2)
 
 
-while not while_loop:
-    user_name = input("Please enter your name:\n")
-    user_bid = int(input("Please enter your bid:\n$"))
-
-    user_bid_data[user_name] = user_bid
-
-    loop_decision = input("Is there anymore Bids? Enter 'Yes' or 'No'. :\n").lower()
-    if loop_decision == "no":
-        while_loop = True
-        winning_bidder(user_bid_data)
+print(f"{num1} {operation_symbol} {num2} = {result}")
