@@ -59,3 +59,25 @@
 
 #Hint 14: Ask the user if they want to restart the game. If they answer yes, clear the console and start a new game of blackjack and show the logo from art.py.
 
+from BlackJack_art import logo
+import random
+
+initiate_game = input("Do you want to play the game of Blackjack? Type 'y' or 'n': ").lower()
+if initiate_game == 'n':
+    print("Thank you for your interest.")
+elif initiate_game == 'y':
+    cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+    random.shuffle(cards)
+    print(cards[0])
+    print(logo)
+
+    print("Your cards: [n,n], current score: n+n")
+    print("Computer's first card: n")
+    user_input = input("Type 'y' to get another card, type 'n' to pass")
+
+    print("Your final hand: [n,n], final score: n+n+n")
+    print("Computer's final hand: [n,n], final score: n")
+
+    print("You Won")
+    print("You lose")
+    print("You went over. You lose")
