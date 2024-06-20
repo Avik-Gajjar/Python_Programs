@@ -624,3 +624,50 @@
 #
 #
 # calculator()
+
+# Number guessing game
+# import random
+#
+#
+# def guessing_game():
+#     print("Welcome to the Number Guessing Game!")
+#     print("Choose a difficulty level:")
+#     print("1. Easy (10 chances)")
+#     print("2. Hard (5 chances)")
+#
+#     difficulty = input("Enter difficulty (1 for Easy, 2 for Hard): ").strip()
+#
+#     if difficulty == '1':
+#         max_attempts = 10
+#         print("You have chosen Easy difficulty. You have 10 chances to guess the number.")
+#     elif difficulty == '2':
+#         max_attempts = 5
+#         print("You have chosen Hard difficulty. You have 5 chances to guess the number.")
+#     else:
+#         print("Invalid choice. Please restart the game and choose a valid difficulty level.")
+#         return
+#
+#     number_to_guess = random.randint(1, 100)
+#     attempts = 0
+#
+#     while attempts<max_attempts:
+#         try:
+#             guess = int(input(f"Attempt {attempts + 1}: Guess a number between 1 and 100: "))
+#             attempts += 1
+#
+#             if guess<number_to_guess:
+#                 print("Too low!")
+#             elif guess>number_to_guess:
+#                 print("Too high!")
+#             else:
+#                 print(f"Congratulations! You guessed the number {number_to_guess} in {attempts} attempts.")
+#                 break
+#         except ValueError:
+#             print("Please enter a valid number.")
+#
+#     if attempts == max_attempts and guess != number_to_guess:
+#         print(f"Sorry, you've run out of attempts. The number was {number_to_guess}.")
+#
+#
+# if __name__ == "__main__":
+#     guessing_game()
